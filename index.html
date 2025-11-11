@@ -1,11 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Test PDF</title>
+  <title>My Artist Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: #222;
+      color: #fff;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .links {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .links a {
+      display: inline-block;
+      margin: 0 15px;
+      color: #222;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .pdf-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+    .pdf-container embed {
+      width: 100%;
+      height: 800px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      .gallery img { max-width: 100%; }
+    }
+  </style>
 </head>
 <body>
-  <h1>My PDF Test</h1>
-  <embed src="mypdf.pdf" type="application/pdf" width="100%" height="800px">
+
+  <header>
+    <h1>My Artist Portfolio</h1>
+  </header>
+
+  <section class="pdf-container">
+    <h2>My PDF Portfolio</h2>
+    <!-- Replace 'mypdf.pdf' with the filename of your PDF -->
+    <embed src="mypdf.pdf" type="application/pdf">
+  </section>
+
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <!-- Replace these with your own images -->
+    <img src="image1.jpg" alt="Artwork 1">
+    <img src="image2.jpg" alt="Artwork 2">
+    <img src="image3.jpg" alt="Artwork 3">
+  </section>
+
+  <section class="links">
+    <h2>Find Me Online</h2>
+    <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+    <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+    <a href="https://behance.net/yourusername" target="_blank">Behance</a>
+  </section>
+
 </body>
 </html>
